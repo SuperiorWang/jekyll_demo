@@ -21,7 +21,8 @@ title: IOS开发_实时监测网络
       //监测网络状况
       [[NSNotificationCenter defaultCenter]addObserver:self
                                             selector:@selector(reachabilityChanged:)
-                                            name:kReachabilityChangedNotification  											 object:nil];
+                                            name:kReachabilityChangedNotification  											 
+                                            object:nil];
       hostReach = [Reachability reachabilityWithHostName:@"www.google.com"];
       [hostReach startNotifier];
     
@@ -37,7 +38,8 @@ title: IOS开发_实时监测网络
       if (status == NotReachable) {
           UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"AppName"
                                                        message:@"NotReachable"
-                                                      delegate:nil 								cancelButtonTitle:@"YES" otherButtonTitles:nil];
+                                                      delegate:nil 								
+                                                      cancelButtonTitle:@"YES" otherButtonTitles:nil];
         [alert show];
       }
     }
